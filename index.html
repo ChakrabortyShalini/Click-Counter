@@ -1,1 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Click Counter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" aria-labelledby="title">
+    <h1 id="title" class="sr-only">Click Counter</h1>
+
+    <section class="card" aria-label="Click counter widget">
+      <div class="count-wrap" aria-live="polite" aria-atomic="true">
+        <div id="count" class="count">0</div>
+        <div id="label" class="label">Clicks</div>
+      </div>
+
+      <div class="controls">
+        <button id="increment" class="btn primary" aria-describedby="increment-desc">
+          + Click
+        </button>
+
+        <button id="decrement" class="btn" aria-describedby="decrement-desc">
+          −
+        </button>
+
+        <button id="reset" class="btn danger" aria-describedby="reset-desc">
+          Reset
+        </button>
+      </div>
+
+      <div class="meta">
+        <small id="increment-desc">Adds one to the counter (Enter / Space).</small>
+        <small id="decrement-desc">Subtracts one from the counter.</small>
+        <small id="reset-desc">Resets the counter to zero (confirm required).</small>
+      </div>
+
+      <footer class="footer">
+        <label for="step" class="step-label">Step:</label>
+        <input id="step" type="number" class="step" value="1" min="1" step="1" />
+        <label class="persist">
+          <input id="persist" type="checkbox" checked /> Persist count
+        </label>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
